@@ -38,6 +38,23 @@ input{
 }
 
 
+.address{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+}
+.address__heading{
+    margin-bottom: 1rem;
+}
+.address__input-box{
+    width: 270px;
+    display: flex;
+    
+}
+.address__input{
+    flex: 1;
+}
 
 
 
