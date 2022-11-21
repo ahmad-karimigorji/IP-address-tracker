@@ -96,7 +96,7 @@ input{
     padding: 2rem 3rem;
     border-radius: 10px;
     text-align: center;
-    /* background-color: #ccc; */
+    display: none;
 
 
 }
