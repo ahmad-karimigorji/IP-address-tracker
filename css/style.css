@@ -5,6 +5,12 @@
     margin: 0;
     box-sizing: border-box;
 }
+:root{
+    --mainBlack: #000;
+    --mainWhite: #fff;
+    --veryDarkGray: rgb(43, 43, 43);
+    --darkGray: rgb(150, 150, 150);
+}
 
 html{
     font-size: 62.5%;
