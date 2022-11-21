@@ -43,7 +43,7 @@ input{
     background-repeat: round;
 }
 
-
+/* ============ address =========== */
 .address{
     display: flex;
     flex-direction: column;
@@ -76,6 +76,8 @@ input{
 ::placeholder{
     font-size: 1.15rem;
 }
+
+/* =========== modal ==== */
 
 
 
