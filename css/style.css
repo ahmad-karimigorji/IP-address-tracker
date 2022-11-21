@@ -46,16 +46,30 @@ input{
 }
 .address__heading{
     margin-bottom: 1rem;
+    color: #fff;
 }
 .address__input-box{
     width: 270px;
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #000;
 }
 .address__input{
     flex: 1;
+    padding: 1rem .7rem;
+    outline: none;
 }
+.address__input-box img{
+    padding: 1rem 1.5rem;
+    transform: scale(.8);
 
+}
+::placeholder{
+    font-size: 1.15rem;
+}
 
 
 
