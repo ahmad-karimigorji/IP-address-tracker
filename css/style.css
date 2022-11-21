@@ -52,7 +52,7 @@ input{
 }
 .address__heading{
     margin-bottom: 1rem;
-    color: #fff;
+    color: var(--mainWhite);
 }
 .address__input-box{
     width: 270px;
@@ -61,7 +61,7 @@ input{
     align-items: center;
     border-radius: 10px;
     overflow: hidden;
-    background-color: #000;
+    background-color: var(--mainBlack);
 }
 .address__input{
     flex: 1;
