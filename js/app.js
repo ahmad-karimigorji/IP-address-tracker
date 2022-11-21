@@ -18,3 +18,25 @@ var circle = L.circle([51.5, -0.09], {
 }).addTo(map);
 
 
+
+// popup 
+marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+circle.bindPopup("I am a circle.");
+
+
+// var popup = L.popup()
+//     .setLatLng([51.513, -0.09])
+//     .setContent("I am a standalone popup.")
+//     .openOn(map);
+
+
+var popup = L.popup();
+
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(map);
+}
+
+map.on('click', onMapClick);
