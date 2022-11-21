@@ -77,7 +77,14 @@ input{
     font-size: 1.15rem;
 }
 
-
+@media screen and (min-width:540px) {
+    .address__input-box{
+        width: 470px;
+    }
+    ::placeholder{
+        font-size: 1.3rem;
+    }
+}
 
 /* =========== modal ==== */
 .modal{
@@ -86,9 +93,10 @@ input{
     left: 50%;
     transform: translate(-50%);
     background-color: var(--mainWhite);
-    padding: 2rem;
+    padding: 2rem 3rem;
     border-radius: 10px;
     text-align: center;
+    /* background-color: #ccc; */
 
 
 }
@@ -97,6 +105,72 @@ input{
 
 }
 
+@media screen and (min-width:540px) {
+    .modal{
+        width: 520px;
+        padding: 1rem;
+    }
+    .address-details{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .modal .address-details > div{
+        height: 100%;
+        margin-bottom: 0;
+        flex-grow: 1;
+
+        padding: 1rem;
+
+    }
+    .address-details > div:not(:last-child){
+        border-right: 1px solid var(--darkGray);
+    }
+    
+    
+}
+
+
+
+
+@media screen and (min-width:768px) {
+    .modal{
+        width: 700px;
+    }
+    .address-details{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .modal .address-details > div{
+        flex-grow: 1;
+        margin-bottom: 0;
+        padding: 1rem;
+    }
+    .modal .address-details > div:not(:last-child){
+        border-right: 1px solid var(--darkGray);
+    }
+}
+@media screen and (min-width:960px) {
+    .modal{
+        width: 800px;
+    }
+    .address-details{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    .modal .address-details > div{
+        flex-grow: 1;
+        margin-bottom: 0;
+        padding: 1rem;
+
+    }
+    .address-details > div:not(:last-child){
+        border-right: 1px solid var(--darkGray);
+    }
+}
 
 
 
