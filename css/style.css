@@ -77,8 +77,25 @@ input{
     font-size: 1.15rem;
 }
 
-/* =========== modal ==== */
 
+
+/* =========== modal ==== */
+.modal{
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: var(--mainWhite);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+
+
+}
+.address-details > div:not(:last-child){
+    margin-bottom: 1.5rem;
+
+}
 
 
 
