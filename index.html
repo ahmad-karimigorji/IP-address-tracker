@@ -28,72 +28,65 @@
         
         <div class="address__input-box">
           <input class="address__input" type="text" placeholder="Search for any IP address or domain">
-          <img src="./images/icon-arrow.svg" alt="icon arrow">
+          <button class="btn">
+            <img src="./images/icon-arrow.svg" alt="icon arrow">
+          </button>
         </div>
       </div>
+        <div class="address-details">
+          <div>
+            <label for="">IP ADDRESS</label>
+            <p>192.213.234.111</p>
+          </div>
+          <div>
+            <label for="">LOCATION</label>
+            <p>Brooklyn, NY 10001</p>
+          </div>
+          <div>
+            <label for="">TIMEZONE</label>
+            <p>UTC -05:00</p>
+          </div>
+          <div>
+            <label for="">ISP</label>
+            <p>SpaceX Starlink</p>
+          </div>
+        </div>
     </div>
   </div>
   <!-- end header  -->
 
 
-  <!-- start modal -->
-    <div class="modal">
-      <div class="address-details">
-        <div>
-          <label for="">IP ADDRESS</label>
-          <p>192.213.234.111</p>
-        </div>
-        <div>
-          <label for="">LOCATION</label>
-          <p>Brooklyn, NY 10001</p>
-        </div>
-        <div>
-          <label for="">TIMEZONE</label>
-          <p>UTC -05:00</p>
-        </div>
-        <div>
-          <label for="">ISP</label>
-          <p>SpaceX Starlink</p>
-        </div>
-      </div>
-    </div>
-  <!-- end modal -->
-
-
-
     <!-- start map  -->
-    <div id="map"></div>
-
-
+    <div id="weathermap"></div>
     <!-- end map  -->
 
 
+    <!-- start footer  -->
+  <footer>
+    <div class="container">
 
+      <p>
+        IP Address Tracker
+      
+      Search for any IP address or domain
+      
+      IP Address
+      Location
+      Timezone
+        UTC <!-- add offset value dynamically using the API -->
+      ISP
 
-
-
-
-
-
-
-  
-  IP Address Tracker
-
-  Search for any IP address or domain
-
-  IP Address
-  Location
-  Timezone
-    UTC <!-- add offset value dynamically using the API -->
-  ISP
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    </p>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
   </div>
+  </footer>
+    <!-- end footer  -->
 
 
 
-  <script src="./js/app.js"></script>
+  <script type="module" src="./js/app.js"></script>
 </body>
 </html>
