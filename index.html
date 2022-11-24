@@ -20,7 +20,7 @@
 <body>
 
   <!-- start header  -->
-  <div class="header">
+  <header>
     <div class="container">
       <div class="address">
 
@@ -36,30 +36,38 @@
         <div class="address-details">
           <div>
             <label for="">IP ADDRESS</label>
-            <p>192.213.234.111</p>
+            <p id="ip-address"></p>
           </div>
           <div>
             <label for="">LOCATION</label>
-            <p>Brooklyn, NY 10001</p>
+            <p id="location"></p>
           </div>
           <div>
             <label for="">TIMEZONE</label>
-            <p>UTC -05:00</p>
+            <p id="timezone"></p>
           </div>
           <div>
             <label for="">ISP</label>
-            <p>SpaceX Starlink</p>
+            <p id="isp"></p>
           </div>
         </div>
     </div>
-  </div>
+  </header>
   <!-- end header  -->
 
+  <!-- start map  -->
+  <div id="weathermap"></div>
+  <!-- end map  -->
 
-    <!-- start map  -->
-    <div id="weathermap"></div>
-    <!-- end map  -->
+<!-- start loading  -->
+  <div class="loading"></div>
+  <div class="loading-backDray"></div>
+<!-- end loading  -->
 
+<!-- start message modal -->
+<div class="message"></div>
+<div class="message-backDray"></div>
+<!-- end message modal  -->
 
     <!-- start footer  -->
   <footer>
@@ -77,15 +85,13 @@
       ISP
 
     </p>
-    <div class="attribution">
+    <div class="footer-link">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://github.com/ahmad-karimigorji">Ahmad Karimi Gorji</a>.
     </div>
   </div>
   </footer>
     <!-- end footer  -->
-
-
 
   <script type="module" src="./js/app.js"></script>
 </body>
