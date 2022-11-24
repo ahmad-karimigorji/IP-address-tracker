@@ -287,6 +287,15 @@ footer{
     color: var(--mainWhite);
     font-weight: 400;
 }
+footer .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer-link{
+    margin-top: .5rem;
+}
 .footer-link a{
     color: #ccc;
 }
