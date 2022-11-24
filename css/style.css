@@ -18,6 +18,10 @@ html{
 /* ============== font style ============= */
 body{
     font-family: 'Rubik', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 h2{
     font-size: 2rem;
@@ -38,9 +42,46 @@ input{
     margin: 0 auto;
     max-width: 1140px;
 }
-.header{
+@media screen and (min-width:320px) {
+    .container{
+        width: 300px;
+    }
+}
+@media screen and (min-width:480px) {
+    .container{
+        width: 450px;
+    }
+}
+@media screen and (min-width:600px) {
+    .container{
+        width: 580px;
+    }
+}
+@media screen and (min-width:768px) {
+    .container{
+        width: 745px;
+    }
+}
+@media screen and (min-width:900px) {
+    .container{
+        width: 880px;
+    }
+}
+@media screen and (min-width:1124px) {
+    .container{
+        width: 1100px;
+    }
+}
+@media screen and (min-width:1200px) {
+    .container{
+        width: 1140px;
+    }
+}
+
+header{
     background-image: url(../images/pattern-bg.png);
     background-repeat: round;
+    position: relative;
 }
 
 /* ============ address =========== */
@@ -48,7 +89,7 @@ input{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem 0;
+    padding: 3rem 0 5rem 0;
 }
 .address__heading{
     margin-bottom: 1rem;
@@ -68,10 +109,15 @@ input{
     padding: 1rem .7rem;
     outline: none;
 }
-.address__input-box img{
+.btn{
+    background-color: transparent;
     padding: 1rem 1.5rem;
+}
+.btn:hover{
+    cursor: pointer;
+}
+.address__input-box img{
     transform: scale(.8);
-
 }
 ::placeholder{
     font-size: 1.15rem;
@@ -86,82 +132,66 @@ input{
     }
 }
 
-/* =========== modal ==== */
-.modal{
+/* =========== address-details ==== */
+.address-details{
     position: absolute;
-    top: 120px;
+    top: 75%;
     left: 50%;
     transform: translate(-50%);
     background-color: var(--mainWhite);
     padding: 2rem 3rem;
     border-radius: 10px;
     text-align: center;
+    z-index: 10;
     display: none;
-
-
+}
+.address-details.display{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 .address-details > div:not(:last-child){
     margin-bottom: 1.5rem;
-
 }
 
 @media screen and (min-width:540px) {
-    .modal{
-        width: 520px;
+    .address-details{
+        width: 90%;
         padding: 1rem;
     }
-    .address-details{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    .address-details.display{
+        flex-direction: row;
     }
-    .modal .address-details > div{
+    header .address-details > div{
         height: 100%;
         margin-bottom: 0;
         flex-grow: 1;
-
         padding: 1rem;
-
     }
     .address-details > div:not(:last-child){
         border-right: 1px solid var(--darkGray);
     }
-    
-    
 }
-
-
-
-
 @media screen and (min-width:768px) {
-    .modal{
+    .address-details{
         width: 700px;
     }
-    .address-details{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .modal .address-details > div{
+    header .address-details > div{
         flex-grow: 1;
         margin-bottom: 0;
         padding: 1rem;
     }
-    .modal .address-details > div:not(:last-child){
+    header .address-details > div:not(:last-child){
         border-right: 1px solid var(--darkGray);
     }
 }
 @media screen and (min-width:960px) {
-    .modal{
+    .address-details{
         width: 800px;
     }
-    .address-details{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         
-    }
-    .modal .address-details > div{
+    header .address-details > div{
         flex-grow: 1;
         margin-bottom: 0;
         padding: 1rem;
@@ -174,10 +204,89 @@ input{
 
 
 /* =========== map ============  */
+#weathermap{
+    min-height: 500px;
+    flex-grow: 1;
+}
+
 #map{
-    height: 500px;
+    z-index: 1;
+}
+/* ================ loading ===================== */
+.loading{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgb(183, 183, 183);
+    border-top: 4px solid rgb(255, 255, 255, 80%);
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    animation: spinerLoading infinite .8s linear;
+    display: none;
+}
+
+.loading-backDray{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    background-color: rgba(0, 0, 0, .3);
+    display: none;
+}
+.loading.display, .loading-backDray.display{
+    display: block;
+}
+
+@keyframes spinerLoading {
+    from {transform: rotate(0);}
+    to {transform: rotate(360deg);}
+}
+
+/* =================== message =================== */
+.message{
+    position: absolute;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--mainWhite);
+    border-radius: 10px;
+    padding: 3rem;
+    color: var(--mainBlack);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    display: none;
+}
+.message-backDray{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    background-color: rgba(0, 0, 0, .3);
+    display: none;
+}
+.message.display, .message-backDray.display{
+    display: block;
 }
 
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+
+/* ================== footer =========================== */
+footer{
+    background-color: var(--mainBlack);
+    padding: 1rem;
+    color: var(--mainWhite);
+    font-weight: 400;
+}
+.footer-link a{
+    color: #ccc;
+}
