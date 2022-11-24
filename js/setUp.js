@@ -1,25 +1,21 @@
-// import {getIP, renderIP} from "./Fetch.js";
-// import getIP from "./Fetch.js";
+import getData from "./Fetch.js";
 import setMap from "./Map.js";
+import PageView from "./PageView.js";
 
+export default function setUp(input) {
+  const promis = getData(input);
 
-function setUp(){
-    // renderUsers();
-    setMap();
+  promis
+    .then((data) => {
+      if (data.code) {
+        PageView.displayNotFoundMessage();
+        return setMap();
+      }
 
-
-    // getIP()
-
-
-    // const p = renderIP();
-
-    // p.then(value => {
-    // console.log(value.location); // 👉️ "hello"
-    // }).catch(err => {
-    // console.log(err);
-    // });
-
+      setMap(data);
+      PageView.displayAddressDetailsBox(data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 }
-
-
-export default setUp;
