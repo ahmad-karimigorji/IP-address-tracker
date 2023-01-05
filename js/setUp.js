@@ -7,15 +7,12 @@ export default function setUp(input) {
 
   promis
     .then((data) => {
-      if (data.code) {
-        PageView.displayNotFoundMessage();
-        return setMap();
-      }
-
       setMap(data);
       PageView.displayAddressDetailsBox(data);
     })
     .catch((err) => {
+      PageView.displayNotFoundMessage();
       console.log(err);
+      return setMap();
     });
 }
