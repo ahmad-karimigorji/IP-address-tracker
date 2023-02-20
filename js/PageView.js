@@ -1,4 +1,4 @@
-import setUp from "./setUp.js";
+import getData from "./Fetch.js";
 
 const loading = document.querySelector(".loading");
 const backDray = document.querySelector(".loading-backDray");
@@ -31,7 +31,7 @@ class PageView {
       "<div id='map' style='width: 100%; height: 100%;'></div>";
 
     const data = input.value.trim();
-    setUp(data);
+    getData(data);
   }
 
   hideMessage() {
