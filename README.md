@@ -13,7 +13,6 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flex
-- CSS Grid
 - IPify ([geolocation API](https://geo.ipify.org/))
 - Leaflet ([map API](https://leafletjs.com/))
 ---
