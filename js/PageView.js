@@ -10,7 +10,7 @@ const isp = document.querySelector("#isp");
 
 const addressDetails = document.querySelector(".address-details");
 
-const btn = document.querySelector(".btn");
+const form = document.querySelector("form");
 const input = document.querySelector(".address__input");
 
 const message = document.querySelector(".message");
@@ -18,10 +18,11 @@ const messageBackDray = document.querySelector(".message-backDray");
 
 class PageView {
   constructor() {
-    btn.addEventListener("click", (e) => this.searchData());
+    form.addEventListener("submit", (e) => this.searchData(e));
     messageBackDray.addEventListener("click", (e) => this.hideMessage());
   }
-  searchData() {
+  searchData(e) {
+    e.preventDefault()
     if (!input.value) {
       this.displayEnterIpMessage();
       this.hideAddressDetailsBox();
