@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
-     crossorigin=""/>
-  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-  integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
-  crossorigin=""></script>
-  <link rel="stylesheet" href="./css/style.css">
-  
-  <title>IP Address Tracker</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="./css/style.css" />
 
+    <title>IP Address Tracker</title>
+  </head>
+  <body>
+    <!-- start header  -->
+    <header>
+      <div class="container">
+        <div class="address">
+          <h2 class="address__heading">IP Address Tracker</h2>
 
-</head>
-<body>
-
-  <!-- start header  -->
-  <header>
-    <div class="container">
-      <div class="address">
-
-        <h2 class="address__heading">IP Address Tracker</h2>
-        
-        <form class="address__input-box">
-          <input class="address__input" type="text" placeholder="Search for any IP address or domain">
-          <button type="submit" class="btn">
-            <img src="./images/icon-arrow.svg" alt="icon arrow">
-          </button>
-        </form>
-      </div>
+          <form class="address__input-box">
+            <input
+              class="address__input"
+              type="text"
+              placeholder="Search for any IP address or domain"
+            />
+            <button type="submit" class="btn">
+              <img src="./images/icon-arrow.svg" alt="icon arrow" />
+            </button>
+          </form>
+        </div>
         <div class="address-details">
           <div>
             <label for="">IP ADDRESS</label>
@@ -51,48 +62,45 @@
             <p id="isp"></p>
           </div>
         </div>
-    </div>
-  </header>
-  <!-- end header  -->
+      </div>
+    </header>
+    <!-- end header  -->
 
-  <!-- start map  -->
-  <div id="weathermap"></div>
-  <!-- end map  -->
+    <!-- start map  -->
+    <div id="weathermap"></div>
+    <!-- end map  -->
 
-<!-- start loading  -->
-  <div class="loading"></div>
-  <div class="loading-backDray"></div>
-<!-- end loading  -->
+    <!-- start loading  -->
+    <div class="loading"></div>
+    <div class="loading-backDray"></div>
+    <!-- end loading  -->
 
-<!-- start message modal -->
-<div class="message"></div>
-<div class="message-backDray"></div>
-<!-- end message modal  -->
+    <!-- start message modal -->
+    <div class="message"></div>
+    <div class="message-backDray"></div>
+    <!-- end message modal  -->
 
     <!-- start footer  -->
-  <footer>
-    <div class="container">
-
-      <p>
-        IP Address Tracker
-      
-      Search for any IP address or domain.
-      
-      IP Address
-      Location
-      Timezone
-        UTC <!-- add offset value dynamically using the API -->
-      ISP
-
-    </p>
-    <div class="footer-link">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://github.com/ahmad-karimigorji">Ahmad Karimi Gorji</a>.
-    </div>
-  </div>
-  </footer>
+    <footer>
+      <div class="container">
+        <p>
+          IP Address Tracker Search for any IP address or domain. IP Address
+          Location Timezone UTC
+          <!-- add offset value dynamically using the API -->
+          ISP
+        </p>
+        <div class="footer-link">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a href="https://github.com/ahmad-karimigorji">Ahmad Karimi Gorji</a>.
+        </div>
+      </div>
+    </footer>
     <!-- end footer  -->
 
-  <script type="module" src="./js/app.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script type="module" src="./js/app.js"></script>
+  </body>
 </html>
