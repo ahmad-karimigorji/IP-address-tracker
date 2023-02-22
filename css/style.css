@@ -298,6 +298,14 @@ footer .container{
     justify-content: center;
     align-items: center;
 }
+footer p{
+    font-size: 1.2rem;
+}
+@media screen and (min-width:480px) {
+    footer p{
+        font-size: 1.8rem;
+    }
+}
 .footer-link{
     margin-top: .5rem;
 }
