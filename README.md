@@ -1,18 +1,9 @@
 # Frontend Mentor - IP address tracker solution
 ## About The Project:
-In this project, you can get its information using IP address or domain. To get the IP Address locations, I use the IP Geolocation API by IPify.
 
-Users should be able to:
-
-- View the optimal layout for each page depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Search for any IP addresses or domains and see the key information and location
+This is a straightforward program that accepts an IP address or domain name as input and enables users to view information about each address, such as location, time zone, and ISP, on an interactive map. The IP Geolocation API by IPify is utilized to obtain the IP address locations, and LeafletJS is utilized to generate the map. It was developed using HTML, CSS, and JavaScript and features a responsive design.
 
 ### Built with
-
-- Semantic HTML5 markup
-- CSS custom properties
-- Flex
 - IPify ([geolocation API](https://geo.ipify.org/))
 - Leaflet ([map API](https://leafletjs.com/))
 ---
